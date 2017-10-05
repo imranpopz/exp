@@ -92,8 +92,8 @@ PRODUCT_COPY_FILES += \
 
 
 # Symbols
-PRODUCT_PACKAGES += \
-    libshims
+#PRODUCT_PACKAGES += \
+#    libshims
 
 # Audio		
 PRODUCT_PACKAGES += \
@@ -103,9 +103,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     tinymix \
     android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.broadcastradio@1.0-impl \
-    android.hardware.soundtrigger@2.0-impl
+    android.hardware.audio.effect@2.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -114,12 +112,6 @@ PRODUCT_PACKAGES += \
 # Messaging
 PRODUCT_PACKAGES += \
 	messaging
-
-# FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio \
-    FMRadioGoogle \
-    FmRadioTrampoline2
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -141,7 +133,6 @@ PRODUCT_PACKAGES += \
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl
@@ -151,8 +142,8 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
 # Configstore
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service
+#PRODUCT_PACKAGES += \
+#    android.hardware.configstore@1.0-service
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -161,6 +152,10 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
 
 # USB
 PRODUCT_PACKAGES += \
@@ -190,36 +185,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-	ro.crypto.state=unencrypted \
-	ro.mount.fs=EXT4 \
-	ro.secure=1 \
-	ro.allow.mock.location=0 \
-	ro.debuggable=1 \
-	ro.zygote=zygote32 \
 	camera.disable_zsl_mode=1 \
-	dalvik.vm.dex2oat-Xms=64m \
-	dalvik.vm.dex2oat-Xmx=512m \
-	dalvik.vm.image-dex2oat-Xms=64m \
-	dalvik.vm.image-dex2oat-Xmx=64m \
-	ro.dalvik.vm.native.bridge=0 \
 	ro.hardware=sprout \
-	ro.telephony.ril_class=SproutRIL \
-	ro.telephony.ril.config=fakeiccid 
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    pm.dexopt.first-boot=verify-at-runtime \
-    pm.dexopt.boot=verify-at-runtime \
-    pm.dexopt.install=interpret-only \
-    pm.dexopt.bg-dexopt=speed-profile \
-    pm.dexopt.ab-ota=speed-profile \
-    pm.dexopt.nsys-library=speed \
-    pm.dexopt.shared-apk=speed \
-    pm.dexopt.forced-dexopt=speed \
-    pm.dexopt.core-app=speed
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-filter=speed \
-    dalvik.vm.dex2oat-swap=false
+	ro.telephony.ril_class=SproutRIL 
 
 USE_CUSTOM_AUDIO_POLICY := 1
 
