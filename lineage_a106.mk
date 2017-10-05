@@ -189,6 +189,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	ro.hardware=sprout \
 	ro.telephony.ril_class=SproutRIL 
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.dex2oat-Xms=64m \
+	dalvik.vm.dex2oat-Xmx=512m \
+	dalvik.vm.image-dex2oat-Xms=64m \
+	dalvik.vm.image-dex2oat-Xmx=64m \
+	dalvik.vm.dex2oat-filter=speed \
+	dalvik.vm.dex2oat-swap=false
+
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # FASTER BOOTANIMATION
