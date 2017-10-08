@@ -117,10 +117,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	Snap
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl
+
 # Camera HIDL HAL
 PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
-    android.hardware.camera.provider@2.4-impl	
+    camera.device@3.2-impl \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service
 
 # GNSS HIDL HAL
 PRODUCT_PACKAGES += \
@@ -202,7 +208,9 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
+    libbt-vendor
 
 # Keymaster
 PRODUCT_PACKAGES += \
