@@ -135,3 +135,6 @@ USE_CAMERA_STUB := true
 # SELinux Policy
 BOARD_SEPOLICY_DIRS += \
     device/micromax/a106/sepolicy
+
+#HIDL
+DEVICE_MANIFEST_FILE := device/micromax/a106/hidl/manifest.xml
