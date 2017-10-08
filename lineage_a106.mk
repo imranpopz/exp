@@ -121,7 +121,11 @@ PRODUCT_PACKAGES += \
 
 # GNSS HIDL HAL
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl 
+    android.hardware.gnss@1.0-impl
+
+# Vibrator HIDL HAL
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl 
 
 # Messaging
 PRODUCT_PACKAGES += \
