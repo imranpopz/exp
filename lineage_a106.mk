@@ -102,8 +102,13 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler \
     tinymix \
+
+# Audio HIDL HAL
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.0-impl \
     android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
