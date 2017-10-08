@@ -155,7 +155,11 @@ PRODUCT_PACKAGES += \
 
 # Light HIDL HAL
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
+    lights.mt6582
 
 # Sensor HIDL HAL
 PRODUCT_PACKAGES += \
