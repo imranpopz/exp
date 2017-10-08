@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
 
+# Keymaster HIDL HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
 # Messaging
 PRODUCT_PACKAGES += \
 	messaging
