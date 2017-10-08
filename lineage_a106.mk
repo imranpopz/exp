@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     android.hardware.camera.provider@2.4-impl	
 
+# GNSS HIDL HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl 
+
 # Messaging
 PRODUCT_PACKAGES += \
 	messaging
