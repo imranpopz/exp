@@ -14,6 +14,11 @@
 
 LOCAL_PATH := device/micromax/a106
 
+LOCAL_SHARED_LIBRARIES := libutils libcutils
+
+LOCAL_LDLIBS := -llog \
+                -landroid
+
 # GPS
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \
