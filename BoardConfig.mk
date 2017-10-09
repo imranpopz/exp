@@ -115,15 +115,15 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-+# System Properties
+# System Properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
-+# Custom RIL
+# Custom RIL
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
 
-+# Neon Flags
-+BOARD_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
-+BOARD_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+# Neon Flags
+BOARD_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
+BOARD_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 TARGET_USERIMAGES_USE_EXT4:=true
 # TARGET_USERIMAGES_USE_F2FS := true
