@@ -116,10 +116,10 @@ PRODUCT_PACKAGES += \
 	messaging
 
 # FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio \
-    FMRadioGoogle \
-    FmRadioTrampoline2
+#PRODUCT_PACKAGES += \
+#    FMRadio \
+#    FMRadioGoogle \
+#    FmRadioTrampoline2
 
 # GPS
 PRODUCT_PACKAGES += \
