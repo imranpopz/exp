@@ -14,27 +14,3 @@ Battery | 2000 mAh
 Display | 4.7" 800 x 480 px
 Camera  | 5MPx
 
-This branch is for building LineageOS 14.1 ROMS.
-
-#### Whats Working ?
- * Wifi
- * Bluetooth
- * Vibration
- * Audio
- * Flashlight (statusbar && Camera)
- * Video Recording
- * Micro SD support
- * MTP and Mass Storage modes
- * Rotation
- * All sensors
- * Doze
- * Offline charging
- * RIL (Call,Data,Msg)
- * Operator name
- * GPS
- * Audio over Bluetooth (music, calls .etc)
- * Hotspot
-
-#### Known Iusses :- 
- * Nupe :)
-
