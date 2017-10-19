@@ -118,8 +118,8 @@ PRODUCT_PACKAGES += \
 	Snap
 
 # FM Radio
-PRODUCT_PACKAGES += \
-    android.hardware.broadcastradio@1.0-impl
+#PRODUCT_PACKAGES += \
+#    android.hardware.broadcastradio@1.0-impl
 
 # Camera HIDL HAL
 PRODUCT_PACKAGES += \
