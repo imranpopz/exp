@@ -129,9 +129,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service
 
 # Health HIDL HAL
-PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl \
-    android.hardware.health@1.0-service
+#PRODUCT_PACKAGES += \
+#    android.hardware.health@1.0-impl \
+#    android.hardware.health@1.0-service
 
 # GNSS HIDL HAL
 PRODUCT_PACKAGES += \
