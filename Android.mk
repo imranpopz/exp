@@ -24,6 +24,7 @@
 # components.
 
 LOCAL_PATH := $(call my-dir)
+LOCAL_LDLIBS := -ldl -llog
 
 ifneq ($(filter a106,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))

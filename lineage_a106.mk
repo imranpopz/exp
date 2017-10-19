@@ -13,6 +13,7 @@
 # limitations under the License.
 
 LOCAL_PATH := device/micromax/a106
+LOCAL_LDLIBS := -ldl -llog
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -118,8 +119,8 @@ PRODUCT_PACKAGES += \
 	Snap
 
 # FM Radio
-#PRODUCT_PACKAGES += \
-#    android.hardware.broadcastradio@1.0-impl
+PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl
 
 # Camera HIDL HAL
 PRODUCT_PACKAGES += \
