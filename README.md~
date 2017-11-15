@@ -1,4 +1,4 @@
-## Huawei Honor H30-U10
+## huawei H30-U10 h30u10
 Unofficial codename - h30u10
 
 THANKS @DeVviL FOR THE TREE 
@@ -7,12 +7,12 @@ Basic   | Spec Sheet
 -------:|:-------------------------
 CPU     | 1.3GHz Quad-Core MT6582
 GPU     | Mali-400MP
-Memory  | 2GB RAM
+Memory  | 1GB RAM
 Shipped Android Version | 4.4.2
-Storage | 8GB
-Battery | 2300 mAh
-Display | 6.0" 720 x 1280 px
-Camera  | 8MPx
+Storage | 4GB
+Battery | 2000 mAh
+Display | 4.7" 800 x 480 px
+Camera  | 5MPx
 
 This branch is for building LineageOS 14.1 ROMS.
 
