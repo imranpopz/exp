@@ -5,18 +5,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Call device specific makefile
-$(call inherit-product, device/huawei/h30u10/lineage_h30u10.mk)
+$(call inherit-product, device/huawei/h30u10/cos_h30u10.mk)
 
 LOCAL_PATH := device/huawei/h30u10
 
 # Common CM stuff
 CM_BUILD := h30u10
 
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cos/common.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=7.1.2/MRA58M/2280749:user/release-keys PRIVATE_BUILD_DESC="h30u10-user 7.1.2 MRA58M 2280749 release-keys"
 
-PRODUCT_NAME := lineage_h30u10
+PRODUCT_NAME := cos_h30u10
 PRODUCT_DEVICE := h30u10
 PRODUCT_BRAND := Huawei
 PRODUCT_MANUFACTURER := Mediatek
