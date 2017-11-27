@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_a106.mk
+    $(LOCAL_DIR)/omni_h30u10.mk

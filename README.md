@@ -1,5 +1,5 @@
-## Micromax Unite 2 A106
-Unofficial codename - a106
+## huawei honor h30u10
+Unofficial codename - h30u10
 
 THANKS @DeVviL FOR THE TREE 
 
