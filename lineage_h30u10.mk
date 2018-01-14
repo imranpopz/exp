@@ -74,7 +74,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.sprout_common.rc:root/init.sprout_common.rc \
-    $(LOCAL_PATH)/rootdir/root/sbin/multi_init:root/sbin/multi_init \
+    $(LOCAL_PATH)/rootdir/root/sbin/chargerlogo:root/sbin/chargerlogo
     $(LOCAL_PATH)/rootdir/root/init.protect.rc:root/init.protect.rc \
     $(LOCAL_PATH)/rootdir/root/init.sprout.rc:root/init.sprout.rc \
     $(LOCAL_PATH)/rootdir/root/init.modem.rc:root/init.modem.rc \
