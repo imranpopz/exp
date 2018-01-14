@@ -16,8 +16,7 @@ TARGET_CPU_MEMCPY_OPT_DISABLE := true
 # NINJA
 USE_NINJA := true
 
-# Block based ota
-BLOCK_BASED_OTA := false
+
 
 # Storage allocations
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -45,6 +44,9 @@ KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 # Hack for build
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 
+# zip package
+BLOCK_BASED_OTA := false
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
@@ -54,6 +56,7 @@ TW_SDEXT_NO_EXT4 := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/power_supply/battery/batt_temp"
+
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
