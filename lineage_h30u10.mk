@@ -60,7 +60,8 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml \
      $(LOCAL_PATH)/configs/thermal.conf:system/etc/.tp/thermal.conf \
      $(LOCAL_PATH)/configs/.ht120.mtc:system/etc/.tp/.ht120.mtc \
-     $(LOCAL_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf
+     $(LOCAL_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
+     $(LOCAL_PATH)/configs/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml
 	
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -83,8 +84,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/ueventd.sprout.rc:root/ueventd.sprout.rc \
     $(LOCAL_PATH)/rootdir/root/init.sprout.usb.rc:root/init.sprout.usb.rc \
     $(LOCAL_PATH)/rootdir/root/init.zeta0y_core.rc:root/init.zeta0y_core.rc \
-    $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout \
-    $(LOCAL_PATH)/rootdir/root/enableswap.sh:root/enableswap.sh
+    $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout
 	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
@@ -169,10 +169,12 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	ro.crypto.state=unencrypted \
 	ro.mount.fs=EXT4 \
 	ro.secure=0 \
+        ro.adb.secure=0 \
 	ro.allow.mock.location=1 \
 	ro.debuggable=1 \
-	persist.sys.usb.config = mtp, adb \
-	persist.service. acm.enable = 1 \
+	persist.sys.usb.config = mtp,adb \
+	persist.service.adb.enable=1 \
+        persist.service.debuggable=1 \
 	ro.zygote=zygote32 \
 	camera.disable_zsl_mode=1 \
 	dalvik.vm.dex2oat-Xms=64m \
@@ -181,8 +183,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	dalvik.vm.image-dex2oat-Xmx=64m \
 	ro.dalvik.vm.native.bridge=0 \
 	ro.hardware=sprout \
-	ro.telephony.ril_class=MediaTekRIL \
-	ro.telephony.ril.config=fakeiccid 
+	ro.telephony.ril_class=MediaTekRIL
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     pm.dexopt.first-boot=verify-at-runtime \
@@ -201,9 +202,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 USE_CUSTOM_AUDIO_POLICY := 1
 
-#KERNEL ADIUTOR
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/priv-app/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk
+
 
 # FASTER BOOTANIMATION
 TARGET_BOOTANIMATION_HALF_RES := true

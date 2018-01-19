@@ -856,21 +856,16 @@ service shutdown /system/bin/shutdown
 service NvRAMAgent /system/bin/nvram_agent_binder
     class main
     user system
-    group system												 
+    group system
+												 
 service thermal_manager /system/bin/thermal_manager
     class main
     user root
     oneshot
 
-on charger
-	mount ext4 /emmc@android /system ro wait
-	start chargerlogo
-
-
-service chargerlogo /sbin/chargerlogo
-    user root
-    disabled
-
+service charger /charger /sbin/healthd -c
+    class charger
+    seclabel u:r:healthd:s0
 #
 # Connectivity related services (Begin)
 #
