@@ -1,1 +1,1 @@
-add_lunch_combo lineage_h30u10-userdebug
+add_lunch_combo xhos_h30u10-userdebug
