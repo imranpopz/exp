@@ -96,28 +96,15 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     tinymix
 
-# Doze
-PRODUCT_PACKAGES += \
-    DozeServices
+# USE_CUSTOM_AUDIO_POLICY := 1
 
-# Camera
-PRODUCT_PACKAGES += \
-	Snap
-
-# Messaging
-PRODUCT_PACKAGES += \
-	messaging
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=SproutRIL
 
 # FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio \
-    FMRadioGoogle \
-    FmRadioTrampoline2
-
-# GPS
-PRODUCT_PACKAGES += \
-    gps.mt6582\
-    YGPS
+# PRODUCT_PACKAGES += \
+#     FMRadioGoogle \
+#    FmRadioTrampoline2
 
 # Wifi
  PRODUCT_PACKAGES += \
@@ -125,11 +112,21 @@ PRODUCT_PACKAGES += \
     hostapd \
     dhcpcd.conf \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    wificond
 
 PRODUCT_PACKAGES += \
     libsprout \
     libxlog
+
+PRODUCT_PACKAGES += \
+    libion \
+    libcurl
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=1 \
+    ro.adb.secure=0 \
+    ro.secure=0
 	
 PRODUCT_PACKAGES += \
     librs_jni \
@@ -145,6 +142,36 @@ PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck \
 
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service 
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service
+    
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+    
 # Power
 PRODUCT_PACKAGES += \
     power.default \
@@ -183,7 +210,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	dalvik.vm.image-dex2oat-Xmx=64m \
 	ro.dalvik.vm.native.bridge=0 \
 	ro.hardware=sprout \
-	ro.telephony.ril_class=MediaTekRIL
+
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     pm.dexopt.first-boot=verify-at-runtime \
@@ -200,12 +227,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-filter=speed \
     dalvik.vm.dex2oat-swap=false
 
-USE_CUSTOM_AUDIO_POLICY := 1
-
-
 
 # FASTER BOOTANIMATION
 TARGET_BOOTANIMATION_HALF_RES := true
 
-# Superuser
-WITH_SU := true
