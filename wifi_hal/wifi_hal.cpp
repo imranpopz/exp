@@ -672,7 +672,7 @@ public:
     virtual int create() {
         int ret;
 
-        ret = mMsg.create(GOOGLE_OUI, GSCAN_SUBCMD_GET_CHANNEL_LIST);
+        ret = mMsg.create(GOOGLE_OUI, WIFI_SUBCMD_GET_CHANNEL_LIST);
         if (ret < 0) {
             return ret;
         }
@@ -712,13 +712,13 @@ protected:
 
         int num_channels = 0;
         for (nl_iterator it(vendor); it.has_next(); it.next()) {
-            if (it.get_type() == GSCAN_ATTRIBUTE_NUM_CHANNELS) {
+            if (it.get_type() == WIFI_ATTRIBUTE_NUM_CHANNELS) {
                 num_channels = it.get_u32();
                 ALOGI("Get channel list with %d channels", num_channels);
                 if (num_channels > mMaxChannels)
                     num_channels = mMaxChannels;
                 *mNumOfChannel = num_channels;
-            } else if (it.get_type() == GSCAN_ATTRIBUTE_CHANNEL_LIST && num_channels) {
+            } else if (it.get_type() == WIFI_ATTRIBUTE_CHANNEL_LIST && num_channels) {
                 memcpy(mChannels, it.get_data(), sizeof(wifi_channel) * num_channels);
             } else {
                 ALOGW("Ignore invalid attribute type = %d, size = %d",
