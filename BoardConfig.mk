@@ -33,6 +33,7 @@ MTK_PLATFORM := mt6582
 MTK_PROJECT := h30u10
 TARGET_KERNEL_SOURCE := kernel/huawei/h30u10
 TARGET_KERNEL_CONFIG := h30u10_defconfig
+BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x10000000
@@ -137,8 +138,8 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
 
-TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+#TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
+#TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 

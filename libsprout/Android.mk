@@ -17,7 +17,6 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     bionic.cpp \
-
     ril.cpp \
     wpa_supplicant.cpp \
     xlog.c \
