@@ -34,6 +34,8 @@ persist.sys.lcd_density=260
 ro.opengles.version=131072
 
 wifi.direct.interface=p2p0
+dalvik.vm.heapgrowthlimit=96m
+dalvik.vm.heapsize=128m
 
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
@@ -47,10 +49,7 @@ ro.sys.usb.storage.type=mtp,adb
 ro.sys.usb.bicr=yes
 
 # USB Charge only function
-ro.sys.usb.charging.only=yes
-
-# temporary disable NAV bar (soft keys)
-qemu.hw.mainkeys=1
+# ro.sys.usb.charging.only=yes
 
 # audio
 ro.camera.sound.forced=0
@@ -68,78 +67,18 @@ ro.mediatek.chip_ver=S01
 ro.mediatek.version.release=ALPS.W10.24.p0
 ro.mediatek.platform=MT6582
 ro.mediatek.version.sdk=1
-ro.crypto.state=unencrypted
 ro.telephony.sim.count=2
 persist.radio.default.sim=0
 persist.radio.multisim.config=dsds
-persist.radio.fd.counter=15
-persist.radio.fd.off.counter=5
-persist.radio.fd.r8.counter=15
-persist.radio.fd.off.r8.counter=5
-wifi.supplicant_scan_interval=15
 ro.telephony.default_network=0,1
 ril.first.md=1
 ril.flightmode.poweroffMD=1
 ril.telephony.mode=0
 persist.mtk.wcn.combo.chipid=-1
 ril.specific.sm_cause=0
-ro.telephony.ril_class=MediaTekRIL
-ro.telephony.ril.config=fakeiccid
 bgw.current3gband=0
 ril.external.md=0
 ro.sf.hwrotation=0
 ril.current.share_modem=2
 ril.radiooff.poweroffMD=0
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
-persist.sys.timezone=Asia/Calcutta
 
-# Tweaks Start Here :)
-
-ro.HOME_APP_ADJ=1
-ro.media.enc.jpeg.quality=100
-ro.media.dec.jpeg.memcap=8000000
-ro.media.enc.hprof.vid.bps=8000000
-ro.media.capture.maxres=8m
-ro.media.panorama.defres=3264×1840
-ro.media.panorama.frameres=1280×720
-ro.camcorder.videoModes=true
-ro.media.enc.hprof.vid.fps=65
-ro.media.enc.jpeg.quality=100
-ro.media.dec.jpeg.memcap=8000000
-ro.media.enc.hprof.vid.bps=8000000
-ro.media.capture.maxres=8m
-ro.media.panorama.defres=3264×1840
-ro.media.panorama.frameres=1280×720
-ro.camcorder.videoModes=true
-ro.media.enc.hprof.vid.fps=65
-net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960
-net.tcp.buffersize.wifi=4096,87380,256960,409 6,163 84,256960
-net.tcp.buffersize.umts=4096,8 7380,256960,4096,163 84,256960
-net.tcp.buffersize.gprs=4096,8 7380,256960,4096,163 84,256960
-net.tcp.buffersize.edge=4096,8 7380,256960,4096,163 84,256960
-ro.ril.power_collapse=1
-pm.sleep_mode=1
-wifi.supplicant_scan_interval=180
-ro.mot.eri.losalert.delay=1000
-ro.ril.hep=0
-ro.ril.hsxpa=2
-ro.ril.gprsclass=12
-ro.ril.enable.dtm=1
-ro.ril.hsdpa.category=8
-ro.ril.enable.a53=1
-ro.ril.enable.3g.prefix=1
-ro.ril.htcmaskw1.bitmask=4294967295
-ro.ril.htcmaskw1=14449
-ro.ril.hsupa.category=6
-ro.telephony.call_ring.delay=0
-ring.delay=0
-windowsmgr.max_events_per_sec=150
-ro.min_pointer_dur=8 ro.max.fling_velocity=12000
-ro.min.fling_velocity=8000
-ro.kernel.android.checkjni=0
-ro.kernel.checkjni=0
-wifi.supplicant_scan_interval=180
-pm.sleep_mode=1
-ro.ril.disable.power.collapse=0
-debug.performance.tuning=1

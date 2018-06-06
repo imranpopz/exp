@@ -1,3 +1,4 @@
+
 # Copyright (C) 2013 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -96,17 +97,6 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     tinymix
 
-# Doze
-PRODUCT_PACKAGES += \
-    DozeServices
-
-# Camera
-PRODUCT_PACKAGES += \
-	Snap
-
-# Messaging
-PRODUCT_PACKAGES += \
-	messaging
 
 # FM Radio
 #PRODUCT_PACKAGES += \
@@ -125,11 +115,16 @@ PRODUCT_PACKAGES += \
     hostapd \
     dhcpcd.conf \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    wificond
 
 PRODUCT_PACKAGES += \
     libsprout \
     libxlog
+
+PRODUCT_PACKAGES += \
+    libion \
+  libcurl
 	
 PRODUCT_PACKAGES += \
     librs_jni \
@@ -145,16 +140,53 @@ PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck \
 
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
 # Power
 PRODUCT_PACKAGES += \
-    power.default \
-    power.mt6582
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service
 
-# Dynamically set props
-#PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
-#    ro.product.name \
-#    ro.product.manufacturer \
-#    ro.product.model
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service
+
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 	
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi

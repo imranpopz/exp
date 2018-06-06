@@ -1,7 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 
-##### For Google SUPPLICANT
-ifeq ($(WPA_SUPPLICANT_VERSION),VER_0_8_X)
+##### For Google SUPPLICANT #####
+ifeq ($(MTKPATH),)
+    $(warning build BASIC wpa_supplicant)
     WPA_SUPPL_DIR = external/wpa_supplicant_8
     WPA_SRC_FILE :=
 

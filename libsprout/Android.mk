@@ -17,12 +17,9 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     bionic.cpp \
-    icu53.c \
-    icu55.c \
+
     ril.cpp \
-    ssl.c \
-    wvm.cpp \
-    ui.cpp \
+    wpa_supplicant.cpp \
     xlog.c \
     xlog_hack.cpp \
     mtk_hack.cpp
