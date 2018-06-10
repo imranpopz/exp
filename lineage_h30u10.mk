@@ -140,9 +140,9 @@ PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck \
 
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
+#PRODUCT_PACKAGES += \
+#    android.hardware.sensors@1.0-impl \
+#    android.hardware.sensors@1.0-service \
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service
@@ -171,9 +171,9 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service
 
 # Audio
-PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl
+#PRODUCT_PACKAGES += \
+#    android.hardware.audio@2.0-impl \
+#    android.hardware.audio.effect@2.0-impl
 
 # Memtrack
 PRODUCT_PACKAGES += \
