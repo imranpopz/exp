@@ -13,10 +13,12 @@ TARGET_ARCH_VARIANT_CPU := cortex-a7
 TARGET_CPU_VARIANT:= cortex-a7
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
+# Deodex
+WITH_DEXPREOPT := false
+DISABLE_DEXPREOPT := true
+
 # NINJA
 USE_NINJA := true
-
-
 
 # Storage allocations
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -83,12 +85,9 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/twrp.fstab
 BOARD_HAS_FLIPPED_SCREEN := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-# EGL settings
-#BOARD_EGL_CFG := $(DEVICE_FOLDER)/egl.cfg
-#USE_OPENGL_RENDERER := true
-
 # OpenGL
 USE_OPENGL_RENDERER:= true
+BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # MTK_WLAN_SUPPORT
 BOARD_WLAN_DEVICE := MediaTek
@@ -107,10 +106,6 @@ WIFI_DRIVER_STATE_OFF := 0
 # MediaTek Support
 BOARD_USES_MTK_HARDWARE := true
 
-# Enable Minikin text layout engine (will be the default soon)
-USE_MINIKIN := true
-
-MALLOC_SVELTE := true
 DEVICE_RESOLUTION := 480x800
 
 # Mediatek flags
@@ -134,8 +129,7 @@ BOARD_CHARGING_CMDLINE_NAME := "androidboot.mode"
 BOARD_CHARGING_CMDLINE_VALUE := "chargerlogo"
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
-
-
+BOARD_EGL_CFG := device/huawei/h30u10/egl.cfg
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
 
 #TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
