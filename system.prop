@@ -61,7 +61,7 @@ ro.kernel.zio=38,108,105,16
 ro.boot.selinux=disable
 
 # Disable dirty region for Mali
-debug.hwui.render_dirty_regions=false
+debug.hwui.profile=true
 
 ro.mediatek.chip_ver=S01
 ro.mediatek.version.release=ALPS.W10.24.p0
@@ -81,4 +81,4 @@ ril.external.md=0
 ro.sf.hwrotation=0
 ril.current.share_modem=2
 ril.radiooff.poweroffMD=0
-
+persist.media.treble_omx=false
