@@ -4,6 +4,7 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 /dev/bootimg		/boot		emmc	defaults defaults
 /dev/recovery		/recovery	emmc	defaults defaults
+/emmc@nvram       /nvram      emmc  defaults
 /emmc@android     /system             ext4      ro                                                          wait
 /emmc@usrdata     /data               ext4      noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check,resize
 /emmc@cache       /cache              ext4      noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check
